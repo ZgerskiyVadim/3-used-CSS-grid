@@ -1,0 +1,75 @@
+.grid{
+    display: grid;
+    grid-template-columns: repeat(12, [col]1fr);
+    grid-template-rows: repeat(1, [row]1fr);
+    color: #9e9e9e;
+}
+
+.block-top {
+    grid-column: col 1 / col 13;
+    height: 80px;
+    background-color: #f0f0f0;
+    box-shadow:  0 1px 10px 0 #b9b9b9;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+}
+
+.buttonsAndOneInput{
+    grid-row: 2/3;
+    grid-column: 2/12;
+    display: grid;
+    grid-template-columns: 105px;
+    grid-template-rows: 35% 35%;
+}
+
+.buttons{
+    grid-row: 2/2;
+    justify-self: start;
+
+}
+
+button {
+    background: rgb(17, 104, 200);
+    padding: .5em 1.3em;
+    border: none;
+    border-radius: 5px;
+}
+
+button:hover { background: rgb(74, 204, 232); } /* при наведении курсора мышки */
+button:active { background: rgb(27, 63, 152); } /* при клике мыши */
+
+input {
+    grid-row: 2/2;
+    justify-self: end;
+    width: 200px;
+    height: 22px;
+    box-shadow:  0 0 0 0 #b9b9b9;
+}
+
+.monthBlock{
+    grid-column: 2 / 3;
+    grid-row: 2/2;
+    display: grid;
+    grid-template-rows: 1fr;
+    /*justify-items: start;*/
+}
+.yearAndDay{
+    /*grid-row: 1/1;*/
+    /*justify-self: start;*/
+    /*align-self: start*/
+    grid-row: 1/1;
+    text-align: center;
+    /*justify-self: start;*/
+}
+
+.containerTable {
+    grid-row: 3/3;
+    grid-column: 2/12;
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-template-rows: repeat(5, 100px);
+    color: #9e9e9e;
+}
+.containerTable div {
+    border: 1px solid #e9e9e9;
+}
